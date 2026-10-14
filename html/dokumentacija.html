@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dokumentacija projekta — autor, struktura i tehnička rješenja.">
+    <title>Pikado portal — Dokumentacija</title>
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <script src="/JSklijent/mstarcevi21.js" defer></script>
+</head>
+<body class="bg-light">
+
+    <nav class="navbar navbar-dark bg-dark py-2">
+        <div class="container d-flex flex-wrap align-items-center gap-2">
+            <a class="navbar-brand fw-bold me-3" href="/index">
+                Pikado<span class="text-danger">Portal</span>
+            </a>
+            <ul class="navbar-nav d-flex flex-row flex-wrap gap-1">
+                <li class="nav-item"><a class="nav-link px-2" href="/index">Početna</a></li>
+                <li class="nav-item"><a class="nav-link px-2" href="/igraci">Igrači</a></li>
+                <li class="nav-item"><a class="nav-link px-2" href="/turniri">Turniri</a></li>
+                <li class="nav-item"><a class="nav-link px-2" href="/pravila">Pravila</a></li>
+                <li class="nav-item"><a class="nav-link px-2" href="/oprema">Oprema</a></li>
+                <li class="nav-item"><a class="nav-link px-2" href="/galerija">Galerija</a></li>
+                <li class="nav-item"><a class="nav-link px-2" href="/obrValidacija">Obrazac</a></li>
+                <li class="nav-item"><a class="nav-link px-2" href="/pregled">Pregled</a></li>
+                <li class="nav-item"><a class="nav-link px-2" href="/api/zapisi">API</a></li>
+                <li class="nav-item"><a class="nav-link px-2 active" href="/dokumentacija">Dokumentacija</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container my-5">
+
+        <section class="mb-5" id="autor">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row align-items-center">
+                        <div class="col-md-3 text-center mb-3 mb-md-0">
+                            <img src="/resursi/slike/autor.jpg"
+                                 alt="Fotografija autora Mateja Starčevića"
+                                 width="250" height="250"
+                                 class="rounded img-fluid"
+                                 style="max-width: 250px;">
+                        </div>
+                        <div class="col-md-9">
+                            <h2 class="card-title">O autoru</h2>
+                            <p class="card-text">
+                                <strong>Ime i prezime:</strong> Matej Starčević<br>
+                                <strong>LDAP:</strong> mstarcevi21<br>
+                                <strong>Studij:</strong> Informatika, FOI Varaždin<br>
+                                <strong>Kolegij:</strong> Osnove Web Tehnologija<br>
+                                <strong>Akademska godina:</strong> 2025./2026.
+                            </p>
+                            <p class="card-text text-muted">
+                                Tema ovog projekta je informativni portal o pikadu.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-5" id="sadrzajni-minimum">
+            <h2 class="mb-3">Sadržajni minimum</h2>
+            <div class="card">
+                <div class="card-body">
+                    <p class="text-muted mb-3">
+                        Popis svih elemenata sadržajnog minimuma zadaće s poveznicama na stranice gdje su realizirani.
+                    </p>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <strong>1. Početna stranica</strong> —
+                            <a href="/index">index.html</a>
+                            <br><small class="text-muted">Hero sekcija, kartice, slike, navigacija</small>
+                        </li>
+                        <li class="list-group-item">
+                            <strong>2. Tablica (5×7, thead/tbody/tfoot/caption)</strong> —
+                            <a href="/igraci">igraci.html</a>
+                            <br><small class="text-muted">PDC ljestvica poretka, 10 igrača, scope atributi</small>
+                        </li>
+                        <li class="list-group-item">
+                            <strong>3. Kompleksniji vizualni CSS element (lightbox)</strong> —
+                            <a href="/galerija">galerija.html</a>
+                            <br><small class="text-muted">CSS-only lightbox s radio input (:checked) i ~ selektorom</small>
+                        </li>
+                        <li class="list-group-item">
+                            <strong>4. Obrazac s JS validacijom (13 vrsta elemenata)</strong> —
+                            <a href="/obrValidacija">obrValidacija</a>
+                            <br><small class="text-muted">text, email, tel, url, number, range, date, select, radio, checkbox, color, textarea, search — validacija u mstarcevi21_obrazac.js</small>
+                        </li>
+                        <li class="list-group-item">
+                            <strong>5. Ostale stranice</strong> —
+                            <a href="/turniri">turniri.html</a>,
+                            <a href="/pravila">pravila.html</a>,
+                            <a href="/oprema">oprema.html</a>
+                            <br><small class="text-muted">Turniri (kartice), Pravila (dvostupčani layout, tablica), Oprema (dl/dt/dd)</small>
+                        </li>
+                        <li class="list-group-item">
+                            <strong>6. Minimalno 3 slike</strong> —
+                            <a href="/index">index.html</a>
+                            <br><small class="text-muted">3 slike u sekciji "Slike iz sporta", + slike u galeriji</small>
+                        </li>
+                        <li class="list-group-item">
+                            <strong>7. Funkcionalna navigacija bez JS</strong> — sve stranice
+                            <br><small class="text-muted">CSS stiliziran nav s :hover i .aktivna klasom; JS dinamički dodaje gumb i označava aktivnu stavku</small>
+                        </li>
+                        <li class="list-group-item">
+                            <strong>8. Responzivnost (desktop/tablet/mobitel)</strong> —
+                            <a href="/dizajn/responzivnost.css">responzivnost.css</a>
+                            <br><small class="text-muted">@media breakpointi na 900px i 600px</small>
+                        </li>
+                        <li class="list-group-item">
+                            <strong>9. NodeJS poslužitelj</strong> —
+                            <code>server.cjs</code>
+                            <br><small class="text-muted">Express poslužitelj koji servira sve stranice, statičke datoteke i API endpoint /api/zapisi</small>
+                        </li>
+                        <li class="list-group-item">
+                            <strong>10. Pregled zapisa iz CSV-a</strong> —
+                            <a href="/pregled">pregled</a>
+                            <br><small class="text-muted">Dinamički prikaz zapisa iz zapisi.csv s pretraživanjem i filtriranjem po kategoriji</small>
+                        </li>
+                        <li class="list-group-item">
+                            <strong>11. REST API</strong> —
+                            <a href="/api/zapisi">/api/zapisi</a>
+                            <br><small class="text-muted">GET /api/zapisi, GET /api/zapisi/:id, POST, PUT, DELETE — zapisi.cjs modul</small>
+                        </li>
+                        <li class="list-group-item">
+                            <strong>12. Dokumentacija (samo Bootstrap)</strong> —
+                            <a href="/dokumentacija">dokumentacija.html</a>
+                            <br><small class="text-muted">Ova stranica — Bootstrap 5, bez mstarcevi21.css</small>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-5" id="zadaca2-dokumentacija">
+            <h2 class="mb-3">Realizacija Zadaće 2</h2>
+
+            <p class="text-muted mb-4">
+                Popis svih stavki iz Tablice 1 i Tablice 2 specifikacije s označenim statusom realizacije:
+                <span class="badge bg-success ms-1">Napravljeno</span>
+                <span class="badge bg-warning text-dark ms-1">Djelomično napravljeno</span>
+                <span class="badge bg-danger ms-1">Nije napravljeno</span>
+            </p>
+
+            <h3 class="mb-3">Tablica 1. JavaScript klijent</h3>
+            <div class="card mb-4">
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div>
+                                <strong>1. Vanjske datoteke</strong>
+                                <br><small class="text-muted">Datoteke <code>mstarcevi21.js</code> i <code>mstarcevi21_obrazac.js</code> nalaze se u <code>/js/klijent/</code></small>
+                            </div>
+                            <span class="badge bg-success ms-3 text-nowrap">Napravljeno</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div>
+                                <strong>2. Validacija obrasca</strong>
+                                <br><small class="text-muted">Implementirano 7 pravila validacije nad 4+ elementa; 2 pravila uključuju odnos između polja (datum i godine iskustva, tel i vrsta upita). Neispravna polja su označena, prikazuju se poruke grešaka, obrazac se ne šalje dok nije sve ispravno.</small>
+                            </div>
+                            <span class="badge bg-success ms-3 text-nowrap">Napravljeno</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div>
+                                <strong>3. Interaktivnost — navigacijski izbornik</strong>
+                                <br><small class="text-muted">Implementirane 2 funkcionalnosti: sklupčavanje/razvijanje izbornika na mobilnim uređajima i dinamičko označavanje aktivne poveznice bez ponovnog učitavanja stranice.</small>
+                            </div>
+                            <span class="badge bg-success ms-3 text-nowrap">Napravljeno</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div>
+                                <strong>4. Interaktivnost — tablica</strong>
+                                <br><small class="text-muted">Na stranici <a href="/igraci">igraci.html</a> implementirano pretraživanje i sortiranje po stupcima nad stvarnim podacima tablice, bez ponovnog učitavanja stranice.</small>
+                            </div>
+                            <span class="badge bg-success ms-3 text-nowrap">Napravljeno</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 class="mb-3">Tablica 2. Poslužiteljska strana</h3>
+            <div class="card mb-4">
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div>
+                                <strong>1. Port za NodeJS poslužitelj</strong>
+                                <br><small class="text-muted">Vlastiti NodeJS Express poslužitelj pokrenut na portu <strong>12418</strong>. Dostupan na <code>http://spider.foi.hr:12418</code></small>
+                            </div>
+                            <span class="badge bg-success ms-3 text-nowrap">Napravljeno</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div>
+                                <strong>2. Posluživanje HTML stranica</strong>
+                                <br><small class="text-muted">Svaka HTML stranica poslužuje se zasebno na putanji bez ekstenzije (npr. <code>/index</code>, <code>/igraci</code>). Korjenska putanja <code>/</code> preusmjerava na početnu stranicu.</small>
+                            </div>
+                            <span class="badge bg-success ms-3 text-nowrap">Napravljeno</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div>
+                                <strong>3. Posluživanje direktorija</strong>
+                                <br><small class="text-muted">JS klijent na <code>/JSklijent</code>, CSS na <code>/dizajn</code>, resursi na <code>/resursi</code> — sve putem <code>express.static</code>.</small>
+                            </div>
+                            <span class="badge bg-success ms-3 text-nowrap">Napravljeno</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div>
+                                <strong>4. JavaScript datoteke na poslužiteljskoj strani</strong>
+                                <br><small class="text-muted">Sve serverske JavaScript datoteke imaju ekstenziju <code>.cjs</code> (npr. <code>server.cjs</code>, <code>zapisi.cjs</code>).</small>
+                            </div>
+                            <span class="badge bg-success ms-3 text-nowrap">Napravljeno</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div>
+                                <strong>5. Nepostojeće putanje</strong>
+                                <br><small class="text-muted">Za sve nepostojeće putanje poslužitelj vraća HTTP status 404 i poruku "Stranica ne postoji!" s poveznicom na početnu stranicu.</small>
+                            </div>
+                            <span class="badge bg-success ms-3 text-nowrap">Napravljeno</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div>
+                                <strong>6. Dinamička stranica /pregled</strong>
+                                <br><small class="text-muted">Stranica čita podatke iz <code>zapisi.csv</code>, prikazuje ih u tablici s id, naziv, kategorija, Prikaži i Obriši. Implementirano pretraživanje po pojmu i filtriranje po kategoriji putem GET parametara.</small>
+                            </div>
+                            <span class="badge bg-success ms-3 text-nowrap">Napravljeno</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div>
+                                <strong>7. Dinamička stranica /pregled/{id}</strong>
+                                <br><small class="text-muted">Prikazuje sve podatke zapisa (id, naziv, opis, kategorija, datumUnosa). Ako zapis nije pronađen, prikazuje se poruka "Traženi zapis nije pronađen!". Postoji poveznica za povratak na /pregled.</small>
+                            </div>
+                            <span class="badge bg-success ms-3 text-nowrap">Napravljeno</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div>
+                                <strong>8. REST servis /api/zapisi</strong>
+                                <br><small class="text-muted">GET vraća 200 + JSON popis, POST vraća 201 + dodani zapis ili 400 za neispravne podatke, PUT vraća 405, DELETE vraća 405.</small>
+                            </div>
+                            <span class="badge bg-success ms-3 text-nowrap">Napravljeno</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div>
+                                <strong>9. REST servis /api/zapisi/{id}</strong>
+                                <br><small class="text-muted">GET vraća 200 + zapis ili 404, POST vraća 405, PUT vraća 200 + ažurirani zapis ili 404/400, DELETE vraća 200 ili 404.</small>
+                            </div>
+                            <span class="badge bg-success ms-3 text-nowrap">Napravljeno</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div>
+                                <strong>10. Vlastiti modul</strong>
+                                <br><small class="text-muted">Modul <code>zapisi.cjs</code> izvozi klasu s metodama: <code>dohvatiSve</code>, <code>dohvatiPoIdentifikatoru</code>, <code>dodajNovi</code>, <code>azurirajPostojeci</code>, <code>ukloniPoIdentifikatoru</code>. Separator je ljestva (#).</small>
+                            </div>
+                            <span class="badge bg-success ms-3 text-nowrap">Napravljeno</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div>
+                                <strong>11. Poruke grešaka</strong>
+                                <br><small class="text-muted">Sve poruke grešaka REST servisa vraćaju se u JSON formatu pod atributom <code>"greska"</code>.</small>
+                            </div>
+                            <span class="badge bg-success ms-3 text-nowrap">Napravljeno</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-5" id="css-validacija">
+            <h2 class="mb-3">CSS datoteke</h2>
+            <div class="card">
+                <div class="card-body">
+                    <p class="text-muted mb-3">
+                        Popis CSS datoteka korištenih u projektu s poveznicama na CSS validator.
+                    </p>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <div>
+                                <strong>mstarcevi21.css</strong>
+                                <br><small class="text-muted">Glavna CSS datoteka — osnovni dizajn svih stranica</small>
+                            </div>
+                            <a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fspider.foi.hr%2FOWT%2F2026%2Fzadaca_02%2Fmstarcevi21%2Fcss%2Fmstarcevi21.css"
+                               target="_blank">
+                                <img src="https://spider.foi.hr/OWT/materijali/slike/CSS3.png"
+                                     alt="Validni CSS3" width="88" height="31">
+                            </a>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <div>
+                                <strong>responzivnost.css</strong>
+                                <br><small class="text-muted">Specifični stilovi i responzivni @media upiti</small>
+                            </div>
+                            <a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fspider.foi.hr%2FOWT%2F2026%2Fzadaca_02%2Fmstarcevi21%2Fcss%2Fresponzivnost.css"
+                               target="_blank">
+                                <img src="https://spider.foi.hr/OWT/materijali/slike/CSS3.png"
+                                     alt="Validni CSS3" width="88" height="31">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-5" id="tehnicka-rjesenja">
+            <h2 class="mb-3">Tehnička rješenja</h2>
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-header bg-danger text-white">CSS-only lightbox</div>
+                        <div class="card-body">
+                            <p class="card-text">
+                                Galerija koristi CSS-only lightbox bez JavaScripta. Tehnika se oslanja
+                                na skrivene <code>radio input</code> elemente i CSS selektor tilde (~)
+                                koji primjenjuje stil na elemente koji slijede iza provjerenog inputa.
+                            </p>
+                            <pre class="bg-light p-2 rounded small"><code>#slika-1:checked ~ .lightbox-1 {
+    display: flex;
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-header bg-danger text-white">CSS varijable i struktura</div>
+                        <div class="card-body">
+                            <p class="card-text">
+                                Sve boje i razmaci definirani su kao CSS varijable u <code>:root</code>
+                                bloku. To omogućuje lako mijenjanje cijelog dizajna na jednom mjestu.
+                            </p>
+                            <pre class="bg-light p-2 rounded small"><code>:root {
+  --boja-primarna: #c0392b;
+  --razmak-srednji: 1rem;
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-header bg-danger text-white">JS validacija obrasca</div>
+                        <div class="card-body">
+                            <p class="card-text">
+                                JavaScript u <code>mstarcevi21_obrazac.js</code> provjerava
+                                7 pravila: obavezna polja, format e-maila i telefona, odnos datuma i
+                                godina igranja te opširnost poruke kod prijave greške.
+                            </p>
+                            <pre class="bg-light p-2 rounded small"><code>obrazac.addEventListener("submit",
+  function (dogadaj) {
+    if (!provjeriObrazac(obrazac)) {
+      dogadaj.preventDefault();
+    }
+  }
+);</code></pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-header bg-danger text-white">Struktura datoteka (Zadaća 2)</div>
+                        <div class="card-body">
+                            <pre class="bg-light p-2 rounded small"><code>mstarcevi21/
+├── server.cjs
+├── zapisi.csv
+├── html/
+│   ├── index.html
+│   ├── igraci.html
+│   ├── turniri.html
+│   ├── pravila.html
+│   ├── oprema.html
+│   ├── galerija.html
+│   ├── kontakt.html
+│   └── dokumentacija.html
+├── css/
+│   ├── mstarcevi21.css
+│   └── responzivnost.css
+├── js/
+│   ├── klijent/
+│   │   ├── mstarcevi21.js
+│   │   └── mstarcevi21_obrazac.js
+│   └── server/
+│       └── zapisi.cjs
+└── resursi/
+    ├── slike/
+    └── ostalo/</code></pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-header bg-danger text-white">NodeJS Express poslužitelj</div>
+                        <div class="card-body">
+                            <p class="card-text">
+                                Poslužitelj u <code>server.cjs</code> koristi Express i servira sve
+                                HTML stranice na čistim rutama, statičke datoteke na
+                                <code>/dizajn</code>, <code>/JSklijent</code> i <code>/resursi</code>,
+                                te CRUD API na <code>/api/zapisi</code>.
+                            </p>
+                            <pre class="bg-light p-2 rounded small"><code>GET  /api/zapisi
+GET  /api/zapisi/:id
+POST /api/zapisi
+PUT  /api/zapisi/:id
+DELETE /api/zapisi/:id</code></pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-header bg-danger text-white">Wireframeovi</div>
+                        <div class="card-body">
+                            <div class="row g-3">
+                                <div class="col-6 col-md-3">
+                                    <a href="/index">
+                                        <img src="/resursi/slike/wireframe-index.jpg"
+                                             alt="Wireframe početne stranice"
+                                             class="img-fluid border rounded">
+                                    </a>
+                                    <small class="text-muted d-block text-center mt-1">index</small>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <a href="/igraci">
+                                        <img src="/resursi/slike/wireframe-igraci.jpg"
+                                             alt="Wireframe stranice igrača"
+                                             class="img-fluid border rounded">
+                                    </a>
+                                    <small class="text-muted d-block text-center mt-1">igraci</small>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <a href="/turniri">
+                                        <img src="/resursi/slike/wireframe-turniri.jpg"
+                                             alt="Wireframe stranice turnira"
+                                             class="img-fluid border rounded">
+                                    </a>
+                                    <small class="text-muted d-block text-center mt-1">turniri</small>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <a href="/pravila">
+                                        <img src="/resursi/slike/wireframe-pravila.jpg"
+                                             alt="Wireframe stranice pravila"
+                                             class="img-fluid border rounded">
+                                    </a>
+                                    <small class="text-muted d-block text-center mt-1">pravila</small>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <a href="/oprema">
+                                        <img src="/resursi/slike/wireframe-oprema.jpg"
+                                             alt="Wireframe stranice opreme"
+                                             class="img-fluid border rounded">
+                                    </a>
+                                    <small class="text-muted d-block text-center mt-1">oprema</small>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <a href="/galerija">
+                                        <img src="/resursi/slike/wireframe-galerija.jpg"
+                                             alt="Wireframe galerije"
+                                             class="img-fluid border rounded">
+                                    </a>
+                                    <small class="text-muted d-block text-center mt-1">galerija</small>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <a href="/kontakt">
+                                        <img src="/resursi/slike/wireframe-kontakt.jpg"
+                                             alt="Wireframe kontakt stranice"
+                                             class="img-fluid border rounded">
+                                    </a>
+                                    <small class="text-muted d-block text-center mt-1">kontakt</small>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <a href="/dokumentacija">
+                                        <img src="/resursi/slike/wireframe-dokumentacija.jpg"
+                                             alt="Wireframe dokumentacije"
+                                             class="img-fluid border rounded">
+                                    </a>
+                                    <small class="text-muted d-block text-center mt-1">dokumentacija</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-dark text-light text-center py-3 mt-5">
+        <div class="container">
+            <p class="mb-0">&copy; 2026 PikadoPortal &mdash; Matej Starčević (mstarcevi21)</p>
+        </div>
+    </footer>
+
+</body>
+</html>

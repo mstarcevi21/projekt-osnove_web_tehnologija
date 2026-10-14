@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Galerija fotografija pikado sporta.">
+    <title>Pikado portal — Galerija</title>
+    <link rel="stylesheet" href="/dizajn/mstarcevi21.css">
+    <link rel="stylesheet" href="/dizajn/responzivnost.css">
+    <script src="/JSklijent/mstarcevi21.js" defer></script>
+</head>
+<body>
+
+    <input type="radio" id="slika-1" name="galerija" class="galerija-radio">
+    <input type="radio" id="slika-2" name="galerija" class="galerija-radio">
+    <input type="radio" id="slika-3" name="galerija" class="galerija-radio">
+    <input type="radio" id="slika-4" name="galerija" class="galerija-radio">
+    <input type="radio" id="slika-5" name="galerija" class="galerija-radio">
+    <input type="radio" id="slika-6" name="galerija" class="galerija-radio">
+
+    <header class="zaglavlje">
+        <div class="kontejner">
+            <a href="/index" class="logo">Pikado<span>Portal</span></a>
+            <nav class="navigacija" aria-label="Glavna navigacija">
+                <ul>
+                    <li><a href="/index">Početna</a></li>
+                    <li><a href="/igraci">Igrači</a></li>
+                    <li><a href="/turniri">Turniri</a></li>
+                    <li><a href="/pravila">Pravila</a></li>
+                    <li><a href="/oprema">Oprema</a></li>
+                    <li><a href="/galerija">Galerija</a></li>
+                    <li><a href="/obrValidacija">Obrazac</a></li>
+                    <li><a href="/pregled">Pregled</a></li>
+                    <li><a href="/api/zapisi">API</a></li>
+                    <li><a href="/dokumentacija">Dokumentacija</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="odjeljak">
+            <div class="kontejner">
+                <h2>Galerija</h2>
+                <p>Kliknite na fotografiju za prikaz u punoj veličini.</p>
+
+                <div class="galerija-mreza">
+
+                    <div class="galerija-stavka">
+                        <label for="slika-1">
+                            <img src="/resursi/slike/pikado-ploca.jpg" alt="Pikado ploča izbliza" width="400" height="267">
+                        </label>
+                    </div>
+
+                    <div class="galerija-stavka">
+                        <label for="slika-2">
+                            <img src="/resursi/slike/strelice-u-ploci.jpg" alt="Strelice u ploči" width="400" height="267">
+                        </label>
+                    </div>
+
+                    <div class="galerija-stavka">
+                        <label for="slika-3">
+                            <img src="/resursi/slike/tehnika-bacanja.jpg" alt="Tehnika bacanja" width="400" height="267">
+                        </label>
+                    </div>
+
+                    <div class="galerija-stavka">
+                        <label for="slika-4">
+                            <img src="/resursi/slike/pikado-strelice.jpg" alt="Detalj strelice" width="400" height="267">
+                        </label>
+                    </div>
+
+                    <div class="galerija-stavka">
+                        <label for="slika-5">
+                            <img src="/resursi/slike/pikado-turnir.jpg" alt="Turnirska dvorana" width="400" height="267">
+                        </label>
+                    </div>
+
+                    <div class="galerija-stavka">
+                        <label for="slika-6">
+                            <img src="/resursi/slike/pikado-svijetlo.jpg" alt="Pikado pribor" width="400" height="267">
+                        </label>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div class="lightbox lightbox-1">
+        <label for="slika-1" class="lightbox-zatvori" title="Zatvori">&times;</label>
+        <img src="/resursi/slike/pikado-ploca.jpg" alt="Pikado ploča izbliza">
+    </div>
+
+    <div class="lightbox lightbox-2">
+        <label for="slika-2" class="lightbox-zatvori" title="Zatvori">&times;</label>
+        <img src="/resursi/slike/strelice-u-ploci.jpg" alt="Strelice u ploči">
+    </div>
+
+    <div class="lightbox lightbox-3">
+        <label for="slika-3" class="lightbox-zatvori" title="Zatvori">&times;</label>
+        <img src="/resursi/slike/tehnika-bacanja.jpg" alt="Tehnika bacanja">
+    </div>
+
+    <div class="lightbox lightbox-4">
+        <label for="slika-4" class="lightbox-zatvori" title="Zatvori">&times;</label>
+        <img src="/resursi/slike/pikado-strelice.jpg" alt="Detalj strelice">
+    </div>
+
+    <div class="lightbox lightbox-5">
+        <label for="slika-5" class="lightbox-zatvori" title="Zatvori">&times;</label>
+        <img src="/resursi/slike/pikado-turnir.jpg" alt="Turnirska dvorana">
+    </div>
+
+    <div class="lightbox lightbox-6">
+        <label for="slika-6" class="lightbox-zatvori" title="Zatvori">&times;</label>
+        <img src="/resursi/slike/pikado-svijetlo.jpg" alt="Pikado pribor">
+    </div>
+
+    <footer class="podnozje">
+        <div class="kontejner">
+            <p>&copy; 2026 PikadoPortal &mdash; Matej Starčević (mstarcevi21) &mdash;
+               <a href="/dokumentacija">Dokumentacija</a>
+            </p>
+            <a href="http://validator.w3.org/check?uri=https%3A%2F%2Fspider.foi.hr%2FOWT%2F2026%2Fzadaca_02%2Fmstarcevi21%2Fhtml%2Fgalerija.html"
+               target="_blank">
+                <img src="https://spider.foi.hr/OWT/materijali/slike/HTML5.png"
+                     alt="Validni HTML5" width="88" height="31">
+            </a>
+        </div>
+    </footer>
+
+</body>
+</html>

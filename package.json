@@ -1,0 +1,12 @@
+{
+  "name": "pikado-portal",
+  "version": "1.0.0",
+  "description": "Pikado portal - projekt iz web tehnologija",
+  "main": "server.cjs",
+  "scripts": {
+    "start": "node server.cjs"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

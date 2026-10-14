@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kontaktirajte nas — obrazac za upit i prijavu na newsletter.">
+    <title>Pikado portal — Kontakt</title>
+    <link rel="stylesheet" href="/dizajn/mstarcevi21.css">
+    <link rel="stylesheet" href="/dizajn/responzivnost.css">
+    <script src="/JSklijent/mstarcevi21.js" defer></script>
+    <script src="/JSklijent/mstarcevi21_obrazac.js" defer></script>
+</head>
+<body>
+
+    <header class="zaglavlje">
+        <div class="kontejner">
+            <a href="/index" class="logo">Pikado<span>Portal</span></a>
+            <nav class="navigacija" aria-label="Glavna navigacija">
+                <ul>
+                    <li><a href="/index">Početna</a></li>
+                    <li><a href="/igraci">Igrači</a></li>
+                    <li><a href="/turniri">Turniri</a></li>
+                    <li><a href="/pravila">Pravila</a></li>
+                    <li><a href="/oprema">Oprema</a></li>
+                    <li><a href="/galerija">Galerija</a></li>
+                    <li><a href="/obrValidacija">Obrazac</a></li>
+                    <li><a href="/pregled">Pregled</a></li>
+                    <li><a href="/api/zapisi">API</a></li>
+                    <li><a href="/dokumentacija">Dokumentacija</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="odjeljak">
+            <div class="kontejner">
+                <h2>Kontakt</h2>
+                <p>Imate pitanje, prijedlog ili uočili pogrešku? Ispunite obrazac ispod.</p>
+
+                <form class="obrazac"
+                      action="https://spider.foi.hr/OWT/materijali/ispis_forme.php"
+                      method="POST"
+                      novalidate>
+
+                    <div class="obrazac-grupa">
+                        <label for="ime">Ime i prezime:</label>
+                        <input type="text" id="ime" name="ime"
+                               placeholder="npr. Ivan Horvat" maxlength="100">
+                    </div>
+
+                    <div class="obrazac-grupa">
+                        <label for="email">E-mail adresa:</label>
+                        <input type="email" id="email" name="email"
+                               placeholder="npr. ivan@primjer.hr">
+                    </div>
+
+                    <div class="obrazac-grupa">
+                        <label for="telefon">Telefon (neobavezno):</label>
+                        <input type="tel" id="telefon" name="telefon"
+                               placeholder="+385 91 234 5678">
+                    </div>
+
+                    <div class="obrazac-grupa">
+                        <label for="web">Vaša web stranica (neobavezno):</label>
+                        <input type="url" id="web" name="web"
+                               placeholder="https://www.primjer.hr">
+                    </div>
+
+                    <div class="obrazac-grupa">
+                        <label for="dob">Koliko godina igrate pikado?</label>
+                        <input type="number" id="dob" name="dob"
+                               min="0" max="50" step="1" value="1">
+                    </div>
+
+                    <div class="obrazac-grupa">
+                        <label for="iskustvo">Vaša razina iskustva (1 = početnik, 10 = profesionalac):</label>
+                        <input type="range" id="iskustvo" name="iskustvo"
+                               min="1" max="10" step="1">
+                    </div>
+
+                    <div class="obrazac-grupa">
+                        <label for="datum">Datum kada ste počeli igrati pikado:</label>
+                        <input type="date" id="datum" name="datum">
+                    </div>
+
+                    <div class="obrazac-grupa">
+                        <label for="vrsta-upita">Vrsta upita:</label>
+                        <select id="vrsta-upita" name="vrsta-upita">
+                            <option value="">-- Odaberite --</option>
+                            <option value="opce-pitanje">Opće pitanje</option>
+                            <option value="oprema">Pitanje o opremi</option>
+                            <option value="turniri">Informacije o turnirima</option>
+                            <option value="greska">Prijava greške na stranici</option>
+                            <option value="suradnja">Prijedlog suradnje</option>
+                        </select>
+                    </div>
+
+                    <fieldset>
+                        <legend>Kako ste saznali za portal?</legend>
+                        <div class="radio-grupa">
+                            <label>
+                                <input type="radio" name="izvor" value="pretraga"> Pretraživač (Google, Bing...)
+                            </label>
+                            <label>
+                                <input type="radio" name="izvor" value="drustvene-mreze"> Društvene mreže
+                            </label>
+                            <label>
+                                <input type="radio" name="izvor" value="preporuka"> Preporuka prijatelja
+                            </label>
+                            <label>
+                                <input type="radio" name="izvor" value="ostalo"> Ostalo
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Koje teme vas zanimaju?</legend>
+                        <div class="kvacica-grupa">
+                            <label>
+                                <input type="checkbox" name="teme" value="pravila"> Pravila igre
+                            </label>
+                            <label>
+                                <input type="checkbox" name="teme" value="igraci"> Profesionalni igrači
+                            </label>
+                            <label>
+                                <input type="checkbox" name="teme" value="turniri"> Turniri i rezultati
+                            </label>
+                            <label>
+                                <input type="checkbox" name="teme" value="oprema"> Oprema i pribor
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <div class="obrazac-grupa">
+                        <label for="omiljena-boja">Vaša omiljena boja strelice:</label>
+                        <input type="color" id="omiljena-boja" name="omiljena-boja" value="#c0392b">
+                    </div>
+
+                    <div class="obrazac-grupa">
+                        <label for="poruka">Vaša poruka:</label>
+                        <textarea id="poruka" name="poruka"
+                                  placeholder="Napišite svoju poruku ovdje..."></textarea>
+                    </div>
+
+                    <div class="obrazac-grupa">
+                        <label for="tema">Tema poruke:</label>
+                        <input type="search" id="tema" name="tema"
+                               placeholder="npr. pitanje o strelicama">
+                    </div>
+
+                    <div class="obrazac-grupa">
+                        <button type="submit" class="obrazac-gumb">Pošalji poruku</button>
+                        <button type="reset" class="obrazac-gumb"
+                                style="background-color: #555; margin-left: 0.5rem;">Resetiraj</button>
+                    </div>
+
+                </form>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="podnozje">
+        <div class="kontejner">
+            <p>&copy; 2026 PikadoPortal &mdash; Matej Starčević (mstarcevi21) &mdash;
+               <a href="/dokumentacija">Dokumentacija</a>
+            </p>
+            <a href="http://validator.w3.org/check?uri=https%3A%2F%2Fspider.foi.hr%2FOWT%2F2026%2Fzadaca_02%2Fmstarcevi21%2Fhtml%2Fkontakt.html"
+               target="_blank">
+                <img src="https://spider.foi.hr/OWT/materijali/slike/HTML5.png"
+                     alt="Validni HTML5" width="88" height="31" loading="lazy">
+            </a>
+        </div>
+    </footer>
+
+</body>
+</html>

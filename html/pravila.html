@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pravila pikada — igra 501 i Cricket, bodovanje i dimenzije ploče.">
+    <title>Pikado portal — Pravila</title>
+    <link rel="stylesheet" href="/dizajn/mstarcevi21.css">
+    <link rel="stylesheet" href="/dizajn/responzivnost.css">
+    <script src="/JSklijent/mstarcevi21.js" defer></script>
+</head>
+<body>
+
+    <header class="zaglavlje">
+        <div class="kontejner">
+            <a href="/index" class="logo">Pikado<span>Portal</span></a>
+            <nav class="navigacija" aria-label="Glavna navigacija">
+                <ul>
+                    <li><a href="/index">Početna</a></li>
+                    <li><a href="/igraci">Igrači</a></li>
+                    <li><a href="/turniri">Turniri</a></li>
+                    <li><a href="/pravila">Pravila</a></li>
+                    <li><a href="/oprema">Oprema</a></li>
+                    <li><a href="/galerija">Galerija</a></li>
+                    <li><a href="/obrValidacija">Obrazac</a></li>
+                    <li><a href="/pregled">Pregled</a></li>
+                    <li><a href="/api/zapisi">API</a></li>
+                    <li><a href="/dokumentacija">Dokumentacija</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="odjeljak">
+            <div class="kontejner">
+                <h2>Pravila pikada</h2>
+                <p>
+                    Pikado se igra na standardnoj bristolskoj ploči s 20 numeriranih segmenata.
+                    Najrašireniji oblici igre su <strong>501</strong> i <strong>Cricket</strong>.
+                </p>
+
+                <div class="dva-stupca">
+
+                    <div>
+                        <h3>Igra 501</h3>
+                        <p>
+                            Svaki igrač počinje s ukupnim zbrojem od 501 boda. Cilj je smanjiti zbroj točno
+                            na nulu. Zadnji pogodak mora biti <em>double</em> (dvostruka vrijednost) ili
+                            bullseye. Ako igrač prekorači nulu (bust), tur se poništava.
+                        </p>
+                        <ol>
+                            <li>Svaki igrač baca 3 strelice po turu.</li>
+                            <li>Bodovi se oduzimaju od početnih 501.</li>
+                            <li>Igra završava pogotkom u dvostruku koji zbroj spušta točno na nulu.</li>
+                            <li>Ako zbrojevi padnu na 1 ili negativnu vrijednost — tur se ne broji.</li>
+                        </ol>
+                    </div>
+
+                    <div>
+                        <h3>Igra Cricket</h3>
+                        <p>
+                            Cricket se igra s brojevima 15–20 i bullseye. Igrač mora "zatvoriti" segment
+                            pogađajući ga 3 puta. Nakon zatvaranja, bodovi se broje sve dok i protivnik
+                            ne zatvori isti segment.
+                        </p>
+                        <ol>
+                            <li>Aktivni segmenti: 15, 16, 17, 18, 19, 20 i bull.</li>
+                            <li>3 pogotka u segment ga "zatvaraju" za tog igrača.</li>
+                            <li>Zatvoreni segmenti donose bodove dok ih protivnik ne zatvori.</li>
+                            <li>Pobijedi igrač koji zatvori sve segmente i ima više bodova.</li>
+                        </ol>
+                    </div>
+
+                </div>
+
+                <h3>Dimenzije i bodovanje</h3>
+                <div class="omot-tablice">
+                    <table>
+                        <caption>Standardne mjere pikado ploče i vrijednosti segmenata</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Element</th>
+                                <th scope="col">Mjera / Vrijednost</th>
+                                <th scope="col">Opis</th>
+                                <th scope="col">Standard</th>
+                                <th scope="col">Napomena</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Promjer ploče</td>
+                                <td>45,1 cm</td>
+                                <td>Ukupni promjer bristolske ploče</td>
+                                <td>BDO / PDC</td>
+                                <td>Uključuje metalni obruč</td>
+                            </tr>
+                            <tr>
+                                <td>Visina bullseye</td>
+                                <td>173 cm</td>
+                                <td>Visina središta ploče od poda</td>
+                                <td>BDO / PDC</td>
+                                <td>Jednako za sve formate</td>
+                            </tr>
+                            <tr>
+                                <td>Udaljenost bacanja (oche)</td>
+                                <td>237 cm</td>
+                                <td>Horizontalna udaljenost od ploče</td>
+                                <td>PDC</td>
+                                <td>Mjeri se od lica ploče</td>
+                            </tr>
+                            <tr>
+                                <td>Bullseye (inner bull)</td>
+                                <td>50 bodova</td>
+                                <td>Crveni kružić u samom središtu</td>
+                                <td>Sve varijante</td>
+                                <td>Promjer 6,35 mm</td>
+                            </tr>
+                            <tr>
+                                <td>Outer bull</td>
+                                <td>25 bodova</td>
+                                <td>Zeleni prsten oko inner bulla</td>
+                                <td>Sve varijante</td>
+                                <td>Promjer 31,8 mm</td>
+                            </tr>
+                            <tr>
+                                <td>Dvostruki prsten</td>
+                                <td>2× vrijednost</td>
+                                <td>Uski vanjski prsten segmenta</td>
+                                <td>Sve varijante</td>
+                                <td>Max: double 20 = 40</td>
+                            </tr>
+                            <tr>
+                                <td>Trostruki prsten</td>
+                                <td>3× vrijednost</td>
+                                <td>Uski unutarnji prsten segmenta</td>
+                                <td>Sve varijante</td>
+                                <td>Max: triple 20 = 60</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="2">Maksimalni rezultat (3 strelice)</td>
+                                <td colspan="3">180 bodova — tri triple 20</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="podnozje">
+        <div class="kontejner">
+            <p>&copy; 2026 PikadoPortal &mdash; Matej Starčević (mstarcevi21) &mdash;
+               <a href="/dokumentacija">Dokumentacija</a>
+            </p>
+            <a href="http://validator.w3.org/check?uri=https%3A%2F%2Fspider.foi.hr%2FOWT%2F2026%2Fzadaca_02%2Fmstarcevi21%2Fhtml%2Fpravila.html"
+               target="_blank">
+                <img src="https://spider.foi.hr/OWT/materijali/slike/HTML5.png"
+                     alt="Validni HTML5" width="88" height="31">
+            </a>
+        </div>
+    </footer>
+
+</body>
+</html>
